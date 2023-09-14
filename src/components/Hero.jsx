@@ -1,11 +1,11 @@
 import React from 'react';
 
-import imageShop from '../../public/img/comprando.jpg';
+import imageShop from '../../public/img/child.jpg';
 import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
-    <section className=' bg-rose-50 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24'>
+    <section className='  bg-neutral-100 h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24'>
       <div className="container mx-auto flex justify-around h-full">
 
         {/*Text*/}
@@ -22,7 +22,7 @@ const Hero = () => {
 
         {/*image*/}
         <div className='hidden lg:block'>
-          <img className='h-full my-auto' src={imageShop} alt="" />
+          <img className='h-full rounded my-auto hover:scale-95 transition ease-out' src={imageShop} alt="" />
         </div>
       </div>
 
