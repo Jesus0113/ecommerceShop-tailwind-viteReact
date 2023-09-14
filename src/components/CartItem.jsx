@@ -5,7 +5,7 @@ import { CartContext } from '../contexts/CartContext';
 
 const CartItem = ({ item }) => {
 
-  const { removeCart } = useContext(CartContext);
+  const { removeCart, incAmount, decAmount } = useContext(CartContext);
 
   const { id, title, image, price, amount } = item;
 
@@ -40,7 +40,7 @@ const CartItem = ({ item }) => {
             {/*qtfy*/}
             <div className='flex flex-1 max-w-[100px] items-center h-full border text-primary font-medium'>
               {/*minus icon */}
-              <div className='flex-1'>
+              <div onClick={()=>decAmount(id)} className='flex-1 flex justify-center items-center cursor-pointer h-full'>
                 <IoMdRemove />
               </div>
 
@@ -50,7 +50,7 @@ const CartItem = ({ item }) => {
               </div>
 
               {/*pluss icon*/}
-              <div className='flex-1 h-full flex justify-center items-center cursor-pointer'>
+              <div onClick={()=>incAmount(id)} className='flex-1 h-full flex justify-center items-center cursor-pointer'>
                 <IoMdAdd />
               </div>
             </div>
